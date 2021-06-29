@@ -156,7 +156,7 @@ def parse_data(raw_attendance):
     parsed_attendance = []
     for line in raw_attendance:
         # extract timestamps
-        raw_timestamp = line[0:29]
+        raw_timestamp = line[0:24]
         try:
             # datetime.datetime.fromisoformat doesn't expect a Z in time zone
             # so we replace it with the explicit time zone "+00:00"
